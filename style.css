@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    overflow: hidden;
+  }
+  
+  .bubbles::before,
+  .bubbles::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 20%, transparent 70%) repeat;
+    animation: moveBubbles 60s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes moveBubbles {
+    from { background-position: 0 0; }
+    to { background-position: 100% -200%; }
+  }
+  
+  .app-container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    margin-top: 10vh;
+  }
+  
+  #display {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #4e54c8;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #e0e0ff;
+  }
+  
+  #feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  .mode-buttons {
+    margin-bottom: 1rem;
+  }
+  
+  .mode-btn {
+    margin: 0 0.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #4e54c8;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .mode-btn:hover {
+    background-color: #dfe0ff;
+  }
+  
